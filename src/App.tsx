@@ -88,7 +88,7 @@ export default function App() {
     setIsDataLoaded(true);
     
     try {
-      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyB9NamauQ8_DX7GHSagY9zojOTFxwgwGh4" });
       const chat = ai.chats.create({
         model: 'gemini-3.1-pro-preview',
         config: {
